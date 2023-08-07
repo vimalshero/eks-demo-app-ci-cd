@@ -1,3 +1,15 @@
+name: Release
+on:
+ push:
+  branches: [master]
+env:
+ AWS_ACCESS_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+ AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+ AWS_REGION: ${{ secrets.AWS_REGION }}
+ ECR_REPOSITORY: greenstest
+
+
+
 jobs:
  release:
   name: Release
